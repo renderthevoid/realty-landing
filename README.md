@@ -1,23 +1,22 @@
-# Portfolio
-Made by React / SCSS / Webpack
+# Realty Landing
+Made by JavaScript / SCSS / Webpack
 
 # Installation
 
 #### HTTPS
 ```
-git clone https://github.com/renderthevoid/portfolio.git
+https://github.com/renderthevoid/realty-landing.git
 ```
 For installing all dependencies type `yarn`
 
 
 Main libraries / tools:
-+ React
-+ React Router Dom v6
++ JavaScript
++ Webpack
 + SCSS
 
 # Structure of the project
 All files associated with the project code are located in `portfolio/src`
 + `assets` - static images
-+ `components` - all components of the project
-+ `pages` - individual pages of the site
++ `js` - all JavaScript of the project
 + `scss` - main styles
