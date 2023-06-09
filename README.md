@@ -18,5 +18,5 @@ Main libraries / tools:
 # Structure of the project
 All files associated with the project code are located in `portfolio/src`
 + `assets` - static images
-+ `js` - all JavaScript of the project
++ `js` - all JavaScript code of the project
 + `scss` - main styles
