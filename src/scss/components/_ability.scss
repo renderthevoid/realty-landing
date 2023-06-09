@@ -1,0 +1,130 @@
+.ability {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    &__container {
+    }
+
+    &__wrapper {
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 130%;
+        color: $green;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+.container {
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.card {
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    border-radius: 5px;
+    height: 500px;
+    cursor: pointer;
+    transition: .3s linear;
+    &:hover {
+        background-color: $green;
+        transform: scale(1.05);
+        .card__icon {
+            path {
+                fill: white;
+            }
+        }
+        .card__title, .card__text {
+            color: $white;
+        }
+        .card__btn {
+            transition: .3s linear;
+            opacity: 1;
+            background-color: $white;
+            color: $black;
+        }
+    }
+    &__wrapper {
+        padding: 55px 30px;
+        @include flex(center, center);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__icon {
+        svg {
+            width: 60px;
+            height: 60px;
+        }
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 160%;
+        margin-bottom: 10px;
+        
+    }
+
+    &__text {
+        width: 290px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        text-align: center;
+        letter-spacing: 0.0015em;
+        margin-bottom: 30px;
+    }
+    .card__btn {
+        background-color: $white;
+        color: $black;
+        opacity: 0;
+    }
+}
+.swiper {
+    height: 600px;
+    width: 1250px;
+}
+.swiper-wrapper {
+    padding: 15px;
+    height: 500px;
+}
+.swiper-pagination-bullet-active {
+    background-color: $green;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: $green;
+}
+.buttons {
+    position: static;
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+.swiper-button-next {
+}
+
+@media (max-width: 1095px) {
+
+}
+@media (max-width: 658px) {
+    .swiper {
+    }
+    // .swiper-wrapper {
+    //     display: flex;
+    //     justify-content: center;
+    // }
+    .card {
+        // max-width: 350px;
+        &__text {
+            height: calc(100% / 1.5);
+        }
+    }
+}

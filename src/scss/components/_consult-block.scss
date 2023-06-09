@@ -1,0 +1,184 @@
+.consult-block {
+    background-color: $semigray;
+    &__wrapper {
+        padding: 60px 0;
+        @include flex(space-around, center);
+    }
+
+    &__text-block {
+        max-width: 350px;
+        span {
+            color: $green;
+        }
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+
+            letter-spacing: 0.0015em;
+        }
+        &__title {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 130%;
+        }
+    }
+}
+.container {
+}
+.consult-form {
+    width: 800px;
+    @include flex(start, start);
+    flex-direction: column;
+    &__caution {
+        color: red;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+
+        letter-spacing: 0.0015em;
+        margin-bottom: 10px;
+    }
+    &__input-wrapper {
+        input {
+            outline: 1px solid $green;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        input + input {
+            margin-left: 25px;
+        }
+    }
+
+    &__input {
+    }
+
+    &__phone {
+    }
+
+    &__email {
+    }
+
+    &__btn {
+    }
+}
+.input {
+}
+.checkbox {
+
+    &__checkmark {
+    }
+
+    &__body {
+    }
+}
+.style-b {
+}
+.button {
+}
+
+.checkbox {
+    display: inline-block;
+    position: relative;
+    margin: 15px 0;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkbox__checkmark {
+            background-color: #fff;
+        }
+        &:checked ~ .checkbox__checkmark:after {
+            opacity: 1;
+        }
+        &:hover input ~ .checkbox__checkmark {
+            background-color: #eee;
+        }
+        &:hover input:checked ~ .checkbox__checkmark {
+            background-color: #fff;
+        }
+    }
+    &__checkmark {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #fff;
+        border: 2px solid $green;
+        transition: background-color 0.25s ease;
+        border-radius: 4px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid $green;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+    }
+    &__body {
+        color: $black;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0.0015em;
+    }
+    
+}
+
+
+@media (max-width: 1095px) {
+    .consult-block {
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__text-block {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    .consult-form {
+        width: 690px;
+        @include flex(center, center);
+    }
+}
+@media (max-width: 695px) {
+    .consult-form {
+        width: calc(100% / 1.5);
+        &__input-wrapper {
+            display: flex;
+            flex-direction: column;
+            input {
+
+            }
+            input + input {
+                margin: 0;
+                margin-top: 20px;
+            }
+
+        }
+    }
+    .checkbox {
+        display: flex;
+        justify-content: space-around;
+    }
+}

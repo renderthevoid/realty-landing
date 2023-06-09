@@ -1,0 +1,27 @@
+@import "./vars";
+@import "./libs/normalize";
+@import "./components/hero";
+@import "./components/modal";
+@import "./components/services";
+@import "./components/ability";
+@import "./components/work";
+@import "./components/about";
+@import "./components/consult-block";
+@import "./components/contacts";
+@import "./components/footer";
+
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;;
+}
+
+.button {
+    background-color: $green;
+    border: none;
+    cursor: pointer;
+    padding: 13px 28px;
+    color: $white;
+    border-radius: 5px;
+}

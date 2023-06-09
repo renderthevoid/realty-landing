@@ -1,0 +1,44 @@
+.contacts {
+    background-image: url("/src/assets/image/contacts.jpg");
+    background-position: right;
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    max-height: 900px;
+    &__container {
+        background-color: transparent;
+    }
+    &__wrapper {
+        padding: 249px 60px 248px 60px;
+        background-color: $white;
+        width: 450px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        a {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+            text-decoration-line: underline;
+            color: $black;
+        }
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 150%;
+        }
+    }
+}
+.container {
+}
+@media (max-width: 500px) {
+    .contacts {
+        &__wrapper {
+            padding: 249px 20px;
+            background-color: $white;
+            width: 330px;
+        }
+    }
+}
